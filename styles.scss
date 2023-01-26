@@ -228,8 +228,21 @@ header {
       }
     }
     .Traveller {
-      img {
+      position: relative;
+      .image {
         width: 100%;
+      }
+      .plane {
+        position: absolute;
+      }
+      .plane-1 {
+        top: 8%;
+        right: 70%;
+      }
+      .plane-2 {
+        right: 0%;
+        top: 25%;
+        z-index: -1;
       }
     }
 
@@ -968,4 +981,31 @@ main {
     right: -22%;
     bottom: -80%;
   }
+}
+
+@keyframes flyOut {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(600px, -350px);
+  }
+}
+
+@keyframes returnBack {
+  0% {
+    transform: translate(-1000px, 750px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+img.animated {
+  animation: flyOut 1.5s linear forwards;
+}
+
+img.get-back {
+  animation: returnBack 1.5s ease-in-out;
+  animation-fill-mode: forwards;
 }

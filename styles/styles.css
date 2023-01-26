@@ -236,8 +236,23 @@ header .hero article .text {
   margin-bottom: 3.4rem;
   max-width: 87%;
 }
-header .hero .Traveller img {
+header .hero .Traveller {
+  position: relative;
+}
+header .hero .Traveller .image {
   width: 100%;
+}
+header .hero .Traveller .plane {
+  position: absolute;
+}
+header .hero .Traveller .plane-1 {
+  top: 8%;
+  right: 70%;
+}
+header .hero .Traveller .plane-2 {
+  right: 0%;
+  top: 25%;
+  z-index: -1;
 }
 header .hero .links {
   display: flex;
@@ -885,6 +900,31 @@ main .form .dots {
 .footer .footer-blur {
   right: -22%;
   bottom: -80%;
+}
+
+@keyframes flyOut {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(600px, -350px);
+  }
+}
+@keyframes returnBack {
+  0% {
+    transform: translate(-1000px, 750px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+img.animated {
+  animation: flyOut 1.5s linear forwards;
+}
+
+img.get-back {
+  animation: returnBack 1.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 /*# sourceMappingURL=styles.css.map */
