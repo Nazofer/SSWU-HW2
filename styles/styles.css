@@ -1,0 +1,886 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+/*Reset*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 16px;
+  font-size: 62.5%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.margin-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.7rem;
+  color: #212832;
+  font-weight: 600;
+}
+
+.subheading {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  color: #df6951;
+}
+
+.title {
+  font-family: "Volkhov";
+  font-weight: 700;
+  font-size: 8.4rem;
+  line-height: 8.9rem;
+  letter-spacing: -0.04em;
+  color: #181e4b;
+}
+
+.text {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: #5e6282;
+}
+
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-align: center;
+  color: #ffffff;
+  background: #f1a501;
+  box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+  border-radius: 10px;
+  padding: 1.8rem 2.6rem;
+}
+
+header {
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 9rem;
+  display: flex;
+  flex-direction: column;
+}
+header .top-nav {
+  display: flex;
+  padding-top: 6.3rem;
+  align-items: center;
+  width: 100%;
+}
+header .top-nav .logo:hover {
+  cursor: pointer;
+}
+header .top-nav .main-links {
+  display: flex;
+  gap: 6rem;
+  margin: 0 8.6rem 0 auto;
+}
+header .top-nav .link:hover {
+  color: #d5aee4;
+  transform: scale(1.1, 1.1);
+  transition: all 0.2s ease-in-out;
+}
+header .top-nav .authorize {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+header .top-nav .authorize .signup {
+  padding: 0.9rem 2rem;
+  background-color: transparent;
+  border: 1px solid #212832;
+  border-radius: 0.5rem;
+}
+header .top-nav .authorize .signup:hover {
+  color: #fff;
+  background-color: #d5aee4;
+  border: 1px solid #d5aee4;
+  transform: none;
+  box-shadow: 0px 6px 8px #ead7f2;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+header .top-nav .authorize .lang {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+header .top-nav .burger-menu {
+  display: none;
+}
+header .decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+header .blur {
+  width: 50rem;
+  height: 50rem;
+  background-color: #d5aee4;
+  opacity: 0.3;
+  filter: blur(75px);
+  position: absolute;
+  top: -3rem;
+  left: -35rem;
+  border-radius: 50%;
+}
+header .hero {
+  height: auto;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+header .hero article {
+  flex: 1 1 45%;
+  align-self: center;
+}
+header .hero article .subheading {
+  margin-bottom: 2.4rem;
+}
+header .hero article .title {
+  margin-bottom: 3rem;
+}
+header .hero article .text {
+  margin-bottom: 3.4rem;
+  max-width: 87%;
+}
+header .hero .Traveller img {
+  width: 100%;
+}
+header .hero .links {
+  display: flex;
+  align-items: center;
+  gap: 4.4rem;
+}
+header .hero .links .button:hover {
+  background-color: #f7c967;
+  transition: all 0.2s ease-in-out;
+}
+header .hero .links .demo {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+header .hero .links .demo .play-button {
+  width: 5.2rem;
+  height: 5.2rem;
+  background: #df6951;
+  box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+header .hero .links .demo .play-button:hover {
+  background: #e99685;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+header .hero .links .demo .text {
+  margin-bottom: 0;
+}
+
+main .services {
+  position: relative;
+  margin-bottom: 20rem;
+}
+main .services .subheading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #5e6282;
+  margin-bottom: 1rem;
+}
+main .services .title {
+  margin-bottom: 6.6rem;
+  text-align: center;
+  font-size: 5rem;
+  line-height: 6.4rem;
+  text-transform: capitalize;
+  color: #14183e;
+}
+main .services .decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+main .services .cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+main .services .cards .card {
+  flex: 1 1 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4.2rem;
+  position: relative;
+  background-color: transparent;
+  border-radius: 3.6rem;
+}
+main .services .cards .card .img {
+  display: flex;
+  width: 100%;
+  height: 15rem;
+  justify-content: center;
+  align-items: center;
+}
+main .services .cards .card .card-header {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #1e1d4c;
+  margin-bottom: 1.5rem;
+}
+main .services .cards .card .text {
+  text-align: center;
+}
+main .services .cards .card .hover-decor {
+  height: 10rem;
+  width: 10rem;
+  background: #df6951;
+  border-radius: 30px 0px 10px;
+  position: absolute;
+  display: none;
+  z-index: -2;
+}
+main .services .cards .card:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  transition: box-shadow 0.25s ease-out;
+}
+main .services .cards .card:hover .hover-decor {
+  display: block;
+  bottom: -10%;
+  left: -10%;
+}
+main .destinations {
+  margin-bottom: 10rem;
+}
+main .destinations .subheading {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #5e6282;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+main .destinations .title {
+  font-family: "Volkhov";
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.4rem;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 6rem;
+}
+main .destinations .destination-cards {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+main .destinations .destination-cards .destination-card {
+  display: flex;
+  align-items: flex-end;
+  min-width: 32rem;
+  min-height: 46rem;
+  border-radius: 2.4rem;
+  background-size: contain;
+  filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+}
+main .destinations .destination-cards .destination-card .destination-description {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 124.5%;
+  color: #5e6282;
+  padding: 2.5rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  border-bottom-left-radius: 2.2rem;
+  border-bottom-right-radius: 2.2rem;
+}
+main .destinations .destination-cards .destination-card .destination-description .header {
+  font-weight: 500;
+}
+main .destinations .destination-cards .destination-card .destination-description .location {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+main .destinations .destination-cards .destination-card .destination-description .trip {
+  display: flex;
+  gap: 1rem;
+}
+main .destinations .destination-cards .destination-card:hover {
+  transform: scale(1.2, 1.2);
+  transition: all 0.3s;
+}
+main .destinations .destination-cards .card1 {
+  background-image: url(../img/destination1.png);
+}
+main .destinations .destination-cards .card2 {
+  background-image: url(../img/destination2.png);
+}
+main .destinations .destination-cards .card3 {
+  background-image: url(../img/destination3.png);
+}
+main .destinations .destination-cards .decore img {
+  position: absolute;
+  bottom: 50px;
+  right: 14px;
+  z-index: -10;
+}
+main .booking {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rem;
+  justify-content: space-between;
+}
+main .booking .booking-steps {
+  max-width: 51rem;
+}
+main .booking .booking-steps .title {
+  font-size: 5rem;
+  line-height: 6.4rem;
+  text-transform: capitalize;
+  color: #14183e;
+  margin-bottom: 3.2rem;
+}
+main .booking .booking-steps .subheading {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  text-transform: capitalize;
+  color: #5e6282;
+  width: fit-content;
+}
+main .booking .booking-steps .steps-list {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+main .booking .booking-steps .steps-list .steps-list-el {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+main .booking .booking-steps .steps-list .steps-list-el .steps-list-el__header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #5e6282;
+  margin-bottom: 0.4rem;
+  width: fit-content;
+}
+main .booking .booking-steps .steps-list .steps-list-el .text {
+  font-weight: 400;
+  line-height: 1.2;
+}
+main .booking .booking-steps .steps-list .steps-list-el .steps-list-el__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 13px;
+  flex-shrink: 0;
+}
+main .booking .booking-steps .steps-list .steps-list-el .steps-list-el__icon__1 {
+  background-color: #f0bb1f;
+}
+main .booking .booking-steps .steps-list .steps-list-el .steps-list-el__icon__2 {
+  background-color: #f15a2b;
+}
+main .booking .booking-steps .steps-list .steps-list-el .steps-list-el__icon__3 {
+  background-color: #006380;
+}
+main .booking .booking-card {
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  padding: 2rem 2.5rem;
+  border-radius: 26px;
+  position: relative;
+  background-color: #fff;
+  margin-right: 12rem;
+}
+main .booking .booking-card .booking-image {
+  margin-bottom: 2.6rem;
+}
+main .booking .booking-card .booking-header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  letter-spacing: 0.015rem;
+  color: #000;
+  margin-bottom: 1.6rem;
+}
+main .booking .booking-card .booking-date {
+  margin-bottom: 2rem;
+}
+main .booking .booking-card .booking-icons {
+  display: flex;
+  gap: 1.8rem;
+  margin-bottom: 3.2rem;
+}
+main .booking .booking-card .booking-icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+}
+main .booking .booking-card .people {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .booking .booking-card .trip-blur {
+  position: absolute;
+  background: #59b1e6;
+  opacity: 0.4;
+  filter: blur(75px);
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  top: -10%;
+  right: -10%;
+  z-index: -1000;
+}
+main .booking .booking-card .trip {
+  position: absolute;
+  right: -30%;
+  top: 50%;
+  background-color: #fff;
+  width: fit-content;
+  display: flex;
+  gap: 1.2rem;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+}
+main .booking .booking-card .trip .trip-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main .booking .booking-card .trip .trip-subheading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  letter-spacing: -0.035rem;
+  font-weight: 500;
+  color: #84829a;
+}
+main .booking .booking-card .trip .trip-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+  letter-spacing: -0.015em;
+  color: #080809;
+}
+main .booking .booking-card .trip .text {
+  font-weight: 500;
+  color: #080809;
+  font-size: 1.4rem;
+  margin-bottom: 0.1rem;
+}
+main .booking .booking-card .trip .text span {
+  color: #8a79df;
+}
+main .booking .booking-card .trip .trip-percentage {
+  height: 0.7rem;
+  background-color: #f5f5f5;
+  width: 17rem;
+  border-radius: 30px;
+}
+main .booking .booking-card .trip .trip-percentage .percentage {
+  width: 40%;
+  border-radius: 30px;
+  flex-grow: 0;
+  justify-self: start;
+  height: 100%;
+  background-color: #8a79df;
+}
+main .testimonials {
+  display: flex;
+  gap: 10rem;
+  margin-bottom: 14.4rem;
+}
+main .testimonials .subheading {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #5e6282;
+}
+main .testimonials .title {
+  font-size: 5rem;
+  line-height: 6.4rem;
+  text-transform: capitalize;
+  color: #14183e;
+  width: 70%;
+}
+main .testimonials .comment {
+  position: relative;
+  max-width: 55rem;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  border-radius: 10px;
+  padding: 0 2.4rem;
+  padding-top: 3.6rem;
+  padding-bottom: 3.2rem;
+  color: #5e6282;
+  font-family: "Poppins", sans-serif;
+}
+main .testimonials .comment .text {
+  margin-bottom: 3.2rem;
+}
+main .testimonials .comment .comment-header {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+main .testimonials .comment .comment-subheader {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+main .testimonials .comment .user-avatar {
+  position: absolute;
+  top: -7%;
+  left: -7%;
+}
+main .logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 12.8rem;
+}
+main .logos .brand-logo {
+  padding: 4rem 1rem;
+  width: 24rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+}
+main .logos .brand-logo:hover {
+  transition: all 0.3s;
+  filter: none;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  border-radius: 10px;
+}
+main .form {
+  background: rgba(223, 215, 249, 0.2);
+  border-radius: 129px 20px 20px 20px;
+  padding: 8rem 15.5rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 12.8rem;
+}
+main .form .form-heading {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.3rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #5e6282;
+  margin-bottom: 6.4rem;
+}
+main .form form {
+  width: 72%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  gap: 2.4rem;
+}
+main .form form .form-input {
+  padding: 2.5rem;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: 400;
+  background-color: #fff;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+main .form form .form-input::before, main .form form .form-input::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+}
+main .form form .form-input::before, main .form form .form-input::after {
+  border: 0px solid transparent;
+  width: 0%;
+  height: 0%;
+  bottom: 0%;
+  right: 0%;
+}
+main .form form .form-input::before {
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+main .form form .form-input::after {
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+main .form form .form-input:focus-within {
+  color: #5e6282;
+}
+main .form form .form-input:focus-within::before, main .form form .form-input:focus-within::after {
+  border-color: #5e6282;
+  transition: border-color 0s, width 0.3s, height 0.3s;
+  width: 100%;
+  height: 100%;
+}
+main .form form .form-input:focus-within::before {
+  transition-delay: 0s, 0s, 0.3s;
+}
+main .form form .form-input:focus-within::after {
+  transition-delay: 0s, 0.3s, 0s;
+}
+main .form form button {
+  background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  padding: 2.2rem 5rem;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+main .form form button:hover {
+  background: linear-gradient(180deg, #ffa98a 0%, #ff9786 100%);
+}
+main .form .spiral {
+  position: absolute;
+  opacity: 0.2;
+  z-index: -1;
+}
+main .form .spiral__2 {
+  bottom: 0;
+  left: 2%;
+}
+main .form .spiral__1 {
+  right: 0;
+  top: 15%;
+}
+main .form .arrow {
+  top: -5%;
+  right: -1%;
+  position: absolute;
+}
+main .form .dots {
+  position: absolute;
+  bottom: -15%;
+  right: -8%;
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+.footer .footer-links {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8.6rem;
+}
+.footer .footer-links .company-name {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.4rem;
+  line-height: 1;
+  color: #181e4b;
+  margin-bottom: 3.2rem;
+}
+.footer .footer-links .company-name:hover {
+  cursor: pointer;
+}
+.footer .footer-links .text {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+.footer .footer-links .row {
+  display: flex;
+  gap: 7rem;
+}
+.footer .footer-links .row .footer-links__col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer .footer-links .row .footer-links__col .footer-links__header {
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2;
+  color: #080809;
+}
+.footer .footer-links .row .footer-links__col .footer-link:link,
+.footer .footer-links .row .footer-links__col .footer-link:visited {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #5e6282;
+}
+.footer .footer-links .footer-links__col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer .footer-links .footer-links__col .social {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer-links .footer-links__col .social img:hover {
+  cursor: pointer;
+}
+.footer .footer-links .footer-links__col .social__header {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  color: #5e6282;
+  margin-bottom: 1.2rem;
+}
+.footer .footer-links .footer-links__col .social__mobile {
+  display: flex;
+  gap: 1rem;
+}
+.footer .footer-links .footer-links__col .social__mobile img:hover {
+  cursor: pointer;
+}
+.footer .copyright {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-bottom: 8rem;
+}
+.footer .footer-blur {
+  right: -22%;
+  bottom: -80%;
+}
+
+/*# sourceMappingURL=styles.css.map */

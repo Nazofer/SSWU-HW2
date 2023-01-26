@@ -1,0 +1,320 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  .margin-container {
+    max-width: 110rem;
+  }
+  .title {
+    font-size: 7rem;
+  }
+  .subheading {
+    font-size: 1.8rem;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .margin-container {
+    max-width: 100rem;
+  }
+  header {
+    .decoration {
+      width: 50%;
+    }
+  }
+  main {
+    .services {
+      .decoration {
+        display: none;
+      }
+      .cards {
+        .card {
+          padding: 3rem;
+        }
+        .card2 {
+          justify-content: flex-start;
+        }
+      }
+    }
+    .destinations {
+      .destination-cards {
+        .decore {
+          display: none;
+        }
+        .destination-card:hover {
+          transform: scale(1.05, 1.05);
+        }
+      }
+    }
+    .booking {
+      .booking-card {
+        margin-right: 0;
+        .trip {
+          right: -5%;
+          top: 95%;
+        }
+      } 
+      
+    }
+    .form {
+      .dots {
+        display: none;
+      }
+    }
+    .testimonials {
+      .title {
+        width: 100%;
+      }
+    }
+  }
+}
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+  .margin-container {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+  header {
+    .top-nav {
+      justify-content: space-between;
+      .main-links {
+        display: none;
+      }
+      .authorize {
+        display: none;
+      }
+      .burger-menu {
+        display: block;
+        // width: 50px !important;
+        // font-size: 5rem !important;
+        & img {
+          width: 45px;
+        }
+      }
+    }
+    .decoration {
+      width: 50%;
+    }
+    .hero {
+      .Traveller {
+        display: none;
+      }
+    }
+  }
+  main {
+    .services {
+      .decoration {
+        display: none;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .destinations {
+      .destination-cards {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .card3 {
+          margin-top: 2rem;
+        }
+      }
+    }
+    .booking {
+      // justify-content: center;
+      // align-items: center;
+      display: block;
+      .booking-steps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        .subheading {
+          text-align: center;
+          width: 100%;
+        }
+        
+      }
+      .booking-card {
+        display: none;
+      }
+    }
+    .logos {
+      flex-wrap: wrap;
+    }
+    .testimonials {
+      flex-direction: column;
+      align-items: center;
+      .subheading {
+        text-align: center;
+      }
+      .comment {
+        .user-avatar {
+          top: -9%;
+          left: -9%;
+        }
+      }
+    }
+    .form {
+      border-radius: 0;
+      padding: 8rem ;
+      .arrow {
+        display: none ;
+      }
+    }
+  }
+  .footer {
+    .row {
+      gap: 1.5rem !important;
+    }
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  .margin-container {
+    max-width: 100%;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  main {
+    .logos {
+      .brand-logo {
+        filter: none;
+        margin-bottom: 2rem;
+        &:hover {
+          transition: none;
+        }
+      }
+    }
+    .form {
+      form {
+        width: 100%;
+      }
+      .spiral__1 {
+        display: none;
+      }
+    }
+  }
+
+  .footer {
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+      gap: 4rem;
+      margin-bottom: 4rem;
+      .company-desc {
+        .text {
+          font-size: 2.5rem !important;
+        }
+      }
+      .row {
+        gap: 5rem !important;
+        .footer-links__col {
+          gap: 3rem;
+        }
+      }
+      .footer-links__col {
+        .social {
+          justify-content: space-around;
+        }
+        .social__header {
+          text-align: center;
+        }
+        .social__mobile img{
+          width: 150px;
+          
+        }
+      }
+    }
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .margin-container {
+    padding: 0 5rem;
+  }
+  header {
+    .hero {
+      .links {
+        justify-content: space-around;
+      }
+    }
+  }
+  main {
+    .services {
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        .card {
+          width: 80%;
+          margin: 0 auto;
+          background-color: #ffffff;
+          box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
+            0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
+            0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
+            0px 20px 13px rgba(0, 0, 0, 0.01),
+            0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
+            0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+
+          &:hover {
+            transition: none;
+          }
+          &:hover .hover-decor {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .destinations {
+      .destination-cards {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        
+        .card3 {
+          margin-top: 0;
+        }
+      }
+    }
+    .form {
+      form {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        button {
+          align-self: end;
+        }
+      }
+    }
+  }
+}
