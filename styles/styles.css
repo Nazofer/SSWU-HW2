@@ -105,6 +105,7 @@ h6 {
   font-size: 1.7rem;
   color: #212832;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
 }
 
 .subheading {
@@ -171,7 +172,6 @@ header .top-nav .main-links {
 header .top-nav .link:hover {
   color: #d5aee4;
   transform: scale(1.1, 1.1);
-  transition: all 0.2s ease-in-out;
 }
 header .top-nav .authorize {
   display: flex;
@@ -191,7 +191,6 @@ header .top-nav .authorize .signup:hover {
   transform: none;
   box-shadow: 0px 6px 8px #ead7f2;
   color: #fff;
-  transition: all 0.2s ease-in-out;
 }
 header .top-nav .authorize .lang {
   display: flex;
@@ -246,9 +245,11 @@ header .hero .links {
   align-items: center;
   gap: 4.4rem;
 }
+header .hero .links .button {
+  transition: all 0.2s ease-in-out;
+}
 header .hero .links .button:hover {
   background-color: #f7c967;
-  transition: all 0.2s ease-in-out;
 }
 header .hero .links .demo {
   display: flex;
@@ -264,10 +265,10 @@ header .hero .links .demo .play-button {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: all 0.2s ease-in-out;
 }
 header .hero .links .demo .play-button:hover {
   background: #e99685;
-  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 header .hero .links .demo .text {
@@ -313,6 +314,7 @@ main .services .cards .card {
   position: relative;
   background-color: transparent;
   border-radius: 3.6rem;
+  transition: box-shadow 0.25s ease-out;
 }
 main .services .cards .card .img {
   display: flex;
@@ -345,7 +347,6 @@ main .services .cards .card .hover-decor {
 main .services .cards .card:hover {
   background-color: #ffffff;
   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
-  transition: box-shadow 0.25s ease-out;
 }
 main .services .cards .card:hover .hover-decor {
   display: block;
@@ -386,6 +387,7 @@ main .destinations .destination-cards .destination-card {
   min-height: 46rem;
   border-radius: 2.4rem;
   background-size: contain;
+  transition: all 0.3s;
   filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
 }
 main .destinations .destination-cards .destination-card .destination-description {
@@ -415,7 +417,6 @@ main .destinations .destination-cards .destination-card .destination-description
 }
 main .destinations .destination-cards .destination-card:hover {
   transform: scale(1.2, 1.2);
-  transition: all 0.3s;
 }
 main .destinations .destination-cards .card1 {
   background-image: url(../img/destination1.png);
@@ -671,9 +672,9 @@ main .logos .brand-logo {
   align-items: center;
   justify-content: center;
   filter: grayscale(100%);
+  transition: all 0.3s;
 }
 main .logos .brand-logo:hover {
-  transition: all 0.3s;
   filter: none;
   cursor: pointer;
   background: #ffffff;
@@ -707,11 +708,7 @@ main .form form {
 }
 main .form form .form-input {
   padding: 2.5rem;
-  font-family: "Open Sans", sans-serif;
   border-radius: 10px;
-  font-size: 1.4rem;
-  line-height: 1.7rem;
-  font-weight: 400;
   background-color: #fff;
   align-items: center;
   gap: 1rem;
@@ -719,6 +716,12 @@ main .form form .form-input {
   display: flex;
   align-items: center;
   position: relative;
+}
+main .form form .form-input input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.7rem;
+  font-weight: 400;
 }
 main .form form .form-input::before, main .form form .form-input::after {
   content: "";
@@ -735,10 +738,12 @@ main .form form .form-input::before, main .form form .form-input::after {
 main .form form .form-input::before {
   border-bottom-width: 2px;
   border-left-width: 2px;
+  transition-delay: 0s, 0s, 0.3s;
 }
 main .form form .form-input::after {
   border-top-width: 2px;
   border-right-width: 2px;
+  transition-delay: 0s, 0s, 0.3s;
 }
 main .form form .form-input:focus-within {
   color: #5e6282;

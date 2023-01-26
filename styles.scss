@@ -98,6 +98,7 @@ h6 {
   font-size: 1.7rem;
   color: #212832;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
 }
 
 .subheading {
@@ -163,7 +164,6 @@ header {
     .link:hover {
       color: #d5aee4;
       transform: scale(1.1, 1.1);
-      transition: all 0.2s ease-in-out;
     }
 
     .authorize {
@@ -185,7 +185,7 @@ header {
         box-shadow: 0px 6px 8px #ead7f2;
         color: #fff;
         // transform: translateY(-5px);
-        transition: all 0.2s ease-in-out;
+        
       }
       .lang {
         display: flex;
@@ -246,9 +246,12 @@ header {
       display: flex;
       align-items: center;
       gap: 4.4rem;
+      .button {
+        transition: all 0.2s ease-in-out;
+      }
       .button:hover {
         background-color: #f7c967;
-        transition: all 0.2s ease-in-out;
+        
       }
       .demo {
         display: flex;
@@ -263,9 +266,10 @@ header {
           align-items: center;
           justify-content: center;
           border-radius: 50%;
+          transition: all 0.2s ease-in-out;
           &:hover {
             background: #e99685;
-            transition: all 0.2s ease-in-out;
+            
             cursor: pointer;
           }
         }
@@ -317,6 +321,7 @@ main {
         position: relative;
         background-color: transparent;
         border-radius: 3.6rem;
+        transition: box-shadow 0.25s ease-out;
         .img {
           display: flex;
           width: 100%;
@@ -353,7 +358,7 @@ main {
             0px 20px 13px rgba(0, 0, 0, 0.01),
             0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
             0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
-          transition: box-shadow 0.25s ease-out;
+          
         }
         &:hover .hover-decor {
           display: block;
@@ -398,7 +403,7 @@ main {
         min-height: 46rem;
         border-radius: 2.4rem;
         background-size: contain;
-
+        transition: all 0.3s;
         filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02))
           drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852))
           drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481))
@@ -435,7 +440,7 @@ main {
       }
       .destination-card:hover {
         transform: scale(1.2, 1.2);
-        transition: all 0.3s;
+        
       }
       .card1 {
         background-image: url(../img/destination1.png);
@@ -759,10 +764,11 @@ main {
       align-items: center;
       justify-content: center;
       filter: grayscale(100%);
+      transition: all 0.3s;
     }
 
     .brand-logo:hover {
-      transition: all 0.3s;
+      
       filter: none;
       cursor: pointer;
       background: #ffffff;
@@ -816,11 +822,10 @@ main {
         // padding-left: 2.5rem;
         padding: 2.5rem;
         // margin-right: 2.4rem;
-        font-family: "Open Sans", sans-serif;
+        
         border-radius: 10px;
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-        font-weight: 400;
+        
+        
         background-color: #fff;
         align-items: center;
         gap: 1rem;
@@ -828,6 +833,13 @@ main {
         display: flex;
         align-items: center;
         position: relative;
+        & input {
+          font-family: "Open Sans", sans-serif;
+          font-size: 1.8rem;
+          line-height: 1.7rem;
+          font-weight: 400;
+        }
+
         &::before,
         &::after {
           content: "";
@@ -837,7 +849,6 @@ main {
         &::before,
         &::after {
           border: 0px solid transparent;
-
           width: 0%;
           height: 0%;
           bottom: 0%;
@@ -846,10 +857,12 @@ main {
         &::before {
           border-bottom-width: 2px;
           border-left-width: 2px;
+          transition-delay: 0s, 0s, 0.3s;
         }
         &::after {
           border-top-width: 2px;
           border-right-width: 2px;
+          transition-delay: 0s, 0s, 0.3s;
         }
         &:focus-within {
           color: #5e6282;
