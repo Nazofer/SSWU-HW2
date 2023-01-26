@@ -73,9 +73,6 @@ a:hover {
 ul li {
   list-style: none;
 }
-// img {
-//   vertical-align: top;
-// }
 
 h1,
 h2,
@@ -86,7 +83,6 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
-/*--------------------*/
 
 .margin-container {
   max-width: 120rem;
@@ -147,7 +143,7 @@ header {
   margin-bottom: 9rem;
   display: flex;
   flex-direction: column;
-  
+
   .top-nav {
     display: flex;
     padding-top: 6.3rem;
@@ -184,8 +180,6 @@ header {
 
         box-shadow: 0px 6px 8px #ead7f2;
         color: #fff;
-        // transform: translateY(-5px);
-        
       }
       .lang {
         display: flex;
@@ -217,7 +211,6 @@ header {
   .hero {
     height: auto;
     display: flex;
-    // margin-bottom: 9rem;
     flex: 1;
     align-items: center;
     article {
@@ -235,8 +228,6 @@ header {
       }
     }
     .Traveller {
-      
-      // margin-top: 2rem;
       img {
         width: 100%;
       }
@@ -251,7 +242,6 @@ header {
       }
       .button:hover {
         background-color: #f7c967;
-        
       }
       .demo {
         display: flex;
@@ -269,7 +259,7 @@ header {
           transition: all 0.2s ease-in-out;
           &:hover {
             background: #e99685;
-            
+
             cursor: pointer;
           }
         }
@@ -283,8 +273,6 @@ header {
 }
 
 main {
-
-
   .services {
     position: relative;
     .subheading {
@@ -358,7 +346,6 @@ main {
             0px 20px 13px rgba(0, 0, 0, 0.01),
             0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
             0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
-          
         }
         &:hover .hover-decor {
           display: block;
@@ -440,7 +427,6 @@ main {
       }
       .destination-card:hover {
         transform: scale(1.2, 1.2);
-        
       }
       .card1 {
         background-image: url(../img/destination1.png);
@@ -464,19 +450,12 @@ main {
   .booking {
     display: flex;
     align-items: center;
-    // gap: 12rem;
-    // justify-content: space-between;
-    // gap: 16.4rem;
-    // gap: 6.4rem;
     margin-bottom: 20rem;
     justify-content: space-between;
 
     .booking-steps {
-      // flex-basis: 40%;
-      // width: 60rem;
       max-width: 51rem;
       .title {
-        
         font-size: 5rem;
         line-height: 6.4rem;
         text-transform: capitalize;
@@ -505,13 +484,10 @@ main {
           display: flex;
           align-items: center;
           gap: 2.4rem;
-          // width: 70%;
-          //width: fit-content;
           .steps-list-el__header {
             font-family: "Poppins", sans-serif;
             font-weight: 700;
             font-size: 1.6rem;
-            // line-height: 1.2;
             color: #5e6282;
             margin-bottom: 0.4rem;
             width: fit-content;
@@ -520,7 +496,6 @@ main {
           .text {
             font-weight: 400;
             line-height: 1.2;
-            // width: 60%;
           }
 
           .steps-list-el__icon {
@@ -671,7 +646,6 @@ main {
           border-radius: 30px;
 
           .percentage {
-            // flex-basis: 40%;
             width: 40%;
             border-radius: 30px;
             flex-grow: 0;
@@ -683,8 +657,6 @@ main {
       }
     }
   }
-
-  // TESTIMONIALS SECTION
 
   .testimonials {
     display: flex;
@@ -747,13 +719,10 @@ main {
     }
   }
 
-  // LOGOS SECTION
-
   .logos {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    //flex-wrap: wrap;
     margin-bottom: 12.8rem;
 
     .brand-logo {
@@ -768,7 +737,6 @@ main {
     }
 
     .brand-logo:hover {
-      
       filter: none;
       cursor: pointer;
       background: #ffffff;
@@ -782,21 +750,13 @@ main {
     }
   }
 
-  // SECTION FORM
-
   .form {
     background: rgba(223, 215, 249, 0.2);
-    // opacity: 0.2;
-    // border-radius: 20px 129px 20px 20px;
     border-radius: 129px 20px 20px 20px;
     padding: 8rem 15.5rem;
     text-align: center;
     position: relative;
-
-    // display: flex;
-
     margin-bottom: 12.8rem;
-
     .form-heading {
       font-family: "Poppins", sans-serif;
       font-style: normal;
@@ -813,19 +773,11 @@ main {
       width: 72%;
       margin: 0 auto;
       position: relative;
-
       display: flex;
       gap: 2.4rem;
       .form-input {
-        // padding-top: 2.5rem;
-        // padding-bottom: 2.5rem;
-        // padding-left: 2.5rem;
         padding: 2.5rem;
-        // margin-right: 2.4rem;
-        
         border-radius: 10px;
-        
-        
         background-color: #fff;
         align-items: center;
         gap: 1rem;
@@ -839,7 +791,6 @@ main {
           line-height: 1.7rem;
           font-weight: 400;
         }
-
         &::before,
         &::after {
           content: "";
@@ -927,8 +878,6 @@ main {
   }
 }
 
-// ============================ FOOTER ============================
-
 .footer {
   position: relative;
   overflow: hidden;
@@ -936,7 +885,6 @@ main {
     display: flex;
     justify-content: space-around;
     margin-bottom: 8.6rem;
-
     .company-name {
       font-family: "Poppins", sans-serif;
       font-style: normal;
@@ -949,7 +897,6 @@ main {
         cursor: pointer;
       }
     }
-
     .text {
       font-size: 1.3rem;
       line-height: 1.2;
@@ -957,64 +904,58 @@ main {
     .row {
       display: flex;
       gap: 7rem;
+      .footer-links__col {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        .footer-links__header {
+          margin-bottom: 2rem;
+          font-family: "Poppins", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 2rem;
+          line-height: 2;
+          color: #080809;
+        }
+        .footer-link:link,
+        .footer-link:visited {
+          font-family: "Poppins", sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.8rem;
+          color: #5e6282;
+        }
+      }
+    }
     .footer-links__col {
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
-      .footer-links__header {
-        margin-bottom: 2rem;
-        font-family: "Poppins", sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 2rem;
-        line-height: 2;
-        color: #080809;
+      .social {
+        display: flex;
+        justify-content: space-between;
+        & img:hover {
+          cursor: pointer;
+        }
       }
-
-      .footer-link:link,
-      .footer-link:visited {
+      .social__header {
         font-family: "Poppins", sans-serif;
         font-style: normal;
         font-weight: 500;
-        font-size: 1.8rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        letter-spacing: 0.005rem;
         color: #5e6282;
+        margin-bottom: 1.2rem;
       }
-
-      
+      .social__mobile {
+        display: flex;
+        gap: 1rem;
+        & img:hover {
+          cursor: pointer;
+        }
+      }
     }
-  }
-  .footer-links__col {
-    display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-  .social {
-    display: flex;
-    justify-content: space-between;
-    & img:hover {
-      cursor: pointer;
-    }
-  }
-
-  .social__header {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2rem;
-    line-height: 1.2;
-    letter-spacing: 0.005rem;
-    color: #5e6282;
-
-    margin-bottom: 1.2rem;
-  }
-
-  .social__mobile {
-    display: flex;
-    gap: 1rem;
-    & img:hover {
-      cursor: pointer;
-    }
-  }
-  }
   }
   .copyright {
     text-align: center;
