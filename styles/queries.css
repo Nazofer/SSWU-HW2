@@ -201,6 +201,9 @@
   .margin-container {
     padding: 0 5rem;
   }
+  header .top-nav .burger-menu .burger-container {
+    width: 77% !important;
+  }
   header .hero .links {
     justify-content: space-around;
   }
