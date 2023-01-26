@@ -197,7 +197,68 @@ header .top-nav .authorize .lang {
   gap: 0.6rem;
 }
 header .top-nav .burger-menu {
+  position: relative;
   display: none;
+}
+header .top-nav .burger-menu input:checked + .burger-container {
+  transform: translateX(0);
+}
+header .top-nav .burger-menu .burger-container {
+  position: fixed;
+  transform: translateX(-200%);
+  transition: all 0.3s ease-out;
+  top: 0;
+  left: 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 219, 172, 0.6509803922);
+  padding: 7rem 0;
+  border-radius: 0 0 14px 0;
+  height: 100%;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+}
+header .top-nav .burger-menu .burger-container a {
+  font-size: 2.5rem;
+}
+header .top-nav .burger-menu .burger-container a img {
+  width: 10px;
+}
+header .top-nav .burger-menu .burger-container .burger-authorize {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+header .top-nav .burger-menu .burger-container .burger-authorize .signup {
+  padding: 0.9rem 2rem;
+  background-color: transparent;
+  border: 1px solid #212832;
+  border-radius: 0.5rem;
+}
+header .top-nav .burger-menu .burger-container .burger-authorize .signup:hover {
+  color: #fff;
+  background-color: #d5aee4;
+  border: 1px solid #d5aee4;
+  transform: none;
+  box-shadow: 0px 6px 8px #ead7f2;
+  color: #fff;
+}
+header .top-nav .burger-menu .burger-container .lang {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+header .top-nav .burger-menu input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  opacity: 0;
 }
 header .decoration {
   position: absolute;
@@ -871,6 +932,12 @@ main .form .dots {
   display: flex;
   justify-content: space-between;
 }
+.footer .footer-links .footer-links__col .social img {
+  width: 65px;
+}
+.footer .footer-links .footer-links__col .social .instagram {
+  width: 47px;
+}
 .footer .footer-links .footer-links__col .social img:hover {
   cursor: pointer;
 }
@@ -912,18 +979,18 @@ main .form .dots {
 }
 @keyframes returnBack {
   0% {
-    transform: translate(-1000px, 750px);
+    transform: translate(600px, -350px);
   }
   100% {
     transform: translate(0, 0);
   }
 }
 img.animated {
-  animation: flyOut 1.5s linear forwards;
+  animation: flyOut 2s linear forwards;
 }
 
 img.get-back {
-  animation: returnBack 1.5s ease-in-out;
+  animation: returnBack 2s ease-in-out;
   animation-fill-mode: forwards;
 }
 

@@ -188,7 +188,69 @@ header {
       }
     }
     .burger-menu {
+      position: relative;
       display: none;
+      input:checked + .burger-container {
+        transform: translateX(0);
+      }
+      .burger-container {
+        position: fixed;
+        transform: translateX(-200%);
+        transition: all 0.3s ease-out;
+        top: 0;
+        left: 0;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFDBACA6;
+        padding: 7rem 0;
+        border-radius: 0 0 14px 0;
+        height: 100%; 
+        z-index: 100;
+        backdrop-filter: blur(20px);
+        a {
+          font-size: 2.5rem;
+          img {
+            width: 10px;
+          }
+        }
+        .burger-authorize {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          .signup {
+            padding: 0.9rem 2rem;
+            background-color: transparent;
+            border: 1px solid #212832;
+            border-radius: 0.5rem;
+          }
+          .signup:hover {
+            color: #fff;
+            background-color: #d5aee4;
+            border: 1px solid #d5aee4;
+            transform: none;
+    
+            box-shadow: 0px 6px 8px #ead7f2;
+            color: #fff;
+          }
+        }
+        .lang {
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+        }
+      }
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45px;
+        height: 45px;
+        opacity: 0;
+      }
     }
   }
   .decoration {
@@ -947,6 +1009,12 @@ main {
       .social {
         display: flex;
         justify-content: space-between;
+        img {
+          width: 65px;
+        }
+        .instagram {
+          width: 47px;
+        }
         & img:hover {
           cursor: pointer;
         }
@@ -964,6 +1032,7 @@ main {
       .social__mobile {
         display: flex;
         gap: 1rem;
+        
         & img:hover {
           cursor: pointer;
         }
@@ -994,7 +1063,7 @@ main {
 
 @keyframes returnBack {
   0% {
-    transform: translate(-1000px, 750px);
+    transform: translate(600px, -350px);
   }
   100% {
     transform: translate(0, 0);
@@ -1002,10 +1071,10 @@ main {
 }
 
 img.animated {
-  animation: flyOut 1.5s linear forwards;
+  animation: flyOut 2s linear forwards;
 }
 
 img.get-back {
-  animation: returnBack 1.5s ease-in-out;
+  animation: returnBack 2s ease-in-out;
   animation-fill-mode: forwards;
 }

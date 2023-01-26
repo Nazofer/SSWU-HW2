@@ -1,7 +1,4 @@
-/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
-/**************************/
 /* BELOW 1344px (Smaller desktops) */
-/**************************/
 @media (max-width: 84em) {
   .margin-container {
     max-width: 110rem;
@@ -13,15 +10,20 @@
     font-size: 1.8rem;
   }
 }
-/**************************/
 /* BELOW 1200px (Landscape Tablets) */
-/**************************/
 @media (max-width: 75em) {
   html {
     font-size: 56.25%;
   }
   .margin-container {
     max-width: 100rem;
+  }
+  header .top-nav .main-links {
+    gap: 3rem;
+    margin-right: 4rem;
+  }
+  header .top-nav .authorize {
+    gap: 2.5rem;
   }
   header .decoration {
     width: 50%;
@@ -55,12 +57,9 @@
     width: 100%;
   }
 }
-/**************************/
 /* BELOW 944px (Tablets) */
-/**************************/
 @media (max-width: 59em) {
   html {
-    /* 8px / 16px = 0.5 = 50% */
     font-size: 50%;
   }
   .margin-container {
@@ -145,14 +144,18 @@
     gap: 1.5rem !important;
   }
 }
-/**************************/
 /* BELOW 704px (Smaller tablets) */
-/**************************/
 @media (max-width: 44em) {
   .margin-container {
     max-width: 100%;
     padding-left: 55px;
     padding-right: 55px;
+  }
+  header .hero .subheading {
+    margin-bottom: 2rem !important;
+  }
+  header .hero .title {
+    font-size: 6rem;
   }
   main .logos .brand-logo {
     filter: none;
@@ -193,9 +196,7 @@
     width: 150px;
   }
 }
-/**************************/
 /* BELOW 544px (Phones) */
-/**************************/
 @media (max-width: 34em) {
   .margin-container {
     padding: 0 5rem;

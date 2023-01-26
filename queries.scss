@@ -1,8 +1,5 @@
-/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
 
-/**************************/
 /* BELOW 1344px (Smaller desktops) */
-/**************************/
 
 @media (max-width: 84em) {
   .margin-container {
@@ -16,9 +13,7 @@
   }
 }
 
-/**************************/
 /* BELOW 1200px (Landscape Tablets) */
-/**************************/
 
 @media (max-width: 75em) {
   html {
@@ -28,6 +23,15 @@
     max-width: 100rem;
   }
   header {
+    .top-nav {
+      .main-links {
+        gap: 3rem;
+        margin-right: 4rem;
+      }
+      .authorize {
+        gap: 2.5rem;
+      }
+    }
     .decoration {
       width: 50%;
     }
@@ -78,13 +82,11 @@
     }
   }
 }
-/**************************/
+
 /* BELOW 944px (Tablets) */
-/**************************/
 
 @media (max-width: 59em) {
   html {
-    /* 8px / 16px = 0.5 = 50% */
     font-size: 50%;
   }
   .margin-container {
@@ -104,8 +106,6 @@
       }
       .burger-menu {
         display: block;
-        // width: 50px !important;
-        // font-size: 5rem !important;
         & img {
           width: 45px;
         }
@@ -140,8 +140,6 @@
       }
     }
     .booking {
-      // justify-content: center;
-      // align-items: center;
       display: block;
       .booking-steps {
         display: flex;
@@ -152,7 +150,6 @@
           text-align: center;
           width: 100%;
         }
-        
       }
       .booking-card {
         display: none;
@@ -189,15 +186,23 @@
   }
 }
 
-/**************************/
 /* BELOW 704px (Smaller tablets) */
-/**************************/
 
 @media (max-width: 44em) {
   .margin-container {
     max-width: 100%;
     padding-left: 55px;
     padding-right: 55px;
+  }
+  header {
+    .hero {
+      .subheading {
+        margin-bottom: 2rem !important;
+    }
+      .title {
+        font-size: 6rem;
+      }
+    }
   }
   main {
     .logos {
@@ -253,9 +258,7 @@
   }
 }
 
-/**************************/
 /* BELOW 544px (Phones) */
-/**************************/
 
 @media (max-width: 34em) {
   .margin-container {
